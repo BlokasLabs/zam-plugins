@@ -49,6 +49,7 @@ ifeq ($(HAVE_JACK),true)
 endif
 	install -t $(DESTDIR)$(PREFIX)/$(LIBDIR)/ladspa bin/*-ladspa.so
 	install -t $(DESTDIR)$(PREFIX)/$(LIBDIR)/vst bin/*-vst.so
+	cp -r modguis/* $(DESTDIR)$(PREFIX)/$(LIBDIR)/lv2
 
 uninstall:
 	for plugin in $(PLUGINS); do \
